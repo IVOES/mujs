@@ -1,0 +1,872 @@
+jsarray.c:20:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i, top = js_gettop(J);
+     ^
+jsarray.c:246:14: style: The scope of the variable 'sx' can be reduced. [variableScope]
+ const char *sx, *sy;
+             ^
+jsarray.c:246:19: style: The scope of the variable 'sy' can be reduced. [variableScope]
+ const char *sx, *sy;
+                  ^
+jsarray.c:247:9: style: The scope of the variable 'v' can be reduced. [variableScope]
+ double v;
+        ^
+jsi.h:113:0: information: Skipping configuration 'JS_INSTRUCTION' since the value of 'JS_INSTRUCTION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+typedef JS_INSTRUCTION js_Instruction;
+^
+mujs.h:116:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_error(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+mujs.h:117:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_evalerror(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+mujs.h:118:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_rangeerror(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+mujs.h:119:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_referenceerror(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+mujs.h:120:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_syntaxerror(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+mujs.h:121:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_typeerror(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+mujs.h:122:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void js_urierror(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+jscompile.c:791:15: warning: Either the condition '!target' is redundant or there is possible null pointer dereference: target. [nullPointerRedundantCheck]
+ jump->next = target->jumps;
+              ^
+jscompile.c:1216:8: note: Assuming that condition '!target' is not redundant
+   if (!target)
+       ^
+jscompile.c:1225:28: note: Calling function 'addjump', 4th argument 'target' value is 0
+  addjump(J, F, STM_BREAK, target, emitjump(J, F, OP_JUMP));
+                           ^
+jscompile.c:791:15: note: Null pointer dereference
+ jump->next = target->jumps;
+              ^
+jscompile.c:792:2: warning: Either the condition '!target' is redundant or there is possible null pointer dereference: target. [nullPointerRedundantCheck]
+ target->jumps = jump;
+ ^
+jscompile.c:1216:8: note: Assuming that condition '!target' is not redundant
+   if (!target)
+       ^
+jscompile.c:1225:28: note: Calling function 'addjump', 4th argument 'target' value is 0
+  addjump(J, F, STM_BREAK, target, emitjump(J, F, OP_JUMP));
+                           ^
+jscompile.c:792:2: note: Null pointer dereference
+ target->jumps = jump;
+ ^
+jscompile.c:299:7: style: The scope of the variable 'nbuf' can be reduced. [variableScope]
+ char nbuf[32], sbuf[32];
+      ^
+jscompile.c:879:10: style: The scope of the variable 'prev' can be reduced. [variableScope]
+ js_Ast *prev;
+         ^
+jscompile.c:979:10: style: The scope of the variable 'L2' can be reduced. [variableScope]
+ int L1, L2, L3;
+         ^
+jscompile.c:1075:18: style: The scope of the variable 'then' can be reduced. [variableScope]
+ int loop, cont, then, end;
+                 ^
+jscompile.c:181:19: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+ js_Instruction x[N];
+                  ^
+jscompile.c:185:18: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+ for (i = 0; i < N; ++i)
+                 ^
+jscompile.c:7:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN void jsC_error(js_State *J, js_Ast *node, const char *fmt, ...) JS_PRINTFLIKE(3,4);
+^
+jsdtoa.c:563:23: style:inconclusive: Function 'js_strtod' argument 1 names different: declaration 'as' definition 'string'. [funcArgNamesDifferent]
+js_strtod(const char *string, char **endPtr)
+                      ^
+jsi.h:129:30: note: Function 'js_strtod' argument 1 names different: declaration 'as' definition 'string'.
+double js_strtod(const char *as, char **aas);
+                             ^
+jsdtoa.c:563:23: note: Function 'js_strtod' argument 1 names different: declaration 'as' definition 'string'.
+js_strtod(const char *string, char **endPtr)
+                      ^
+jsdtoa.c:563:38: style:inconclusive: Function 'js_strtod' argument 2 names different: declaration 'aas' definition 'endPtr'. [funcArgNamesDifferent]
+js_strtod(const char *string, char **endPtr)
+                                     ^
+jsi.h:129:41: note: Function 'js_strtod' argument 2 names different: declaration 'aas' definition 'endPtr'.
+double js_strtod(const char *as, char **aas);
+                                        ^
+jsdtoa.c:563:38: note: Function 'js_strtod' argument 2 names different: declaration 'aas' definition 'endPtr'.
+js_strtod(const char *string, char **endPtr)
+                                     ^
+jserror.c:94:1: style:inconclusive: Function 'js_newerror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(error, Error)
+^
+mujs.h:108:43: note: Function 'js_newerror' argument 2 names different: declaration 'message' definition 's'.
+void js_newerror(js_State *J, const char *message);
+                                          ^
+jserror.c:94:1: note: Function 'js_newerror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(error, Error)
+^
+jserror.c:95:1: style:inconclusive: Function 'js_newevalerror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(evalerror, EvalError)
+^
+mujs.h:109:47: note: Function 'js_newevalerror' argument 2 names different: declaration 'message' definition 's'.
+void js_newevalerror(js_State *J, const char *message);
+                                              ^
+jserror.c:95:1: note: Function 'js_newevalerror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(evalerror, EvalError)
+^
+jserror.c:96:1: style:inconclusive: Function 'js_newrangeerror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(rangeerror, RangeError)
+^
+mujs.h:110:48: note: Function 'js_newrangeerror' argument 2 names different: declaration 'message' definition 's'.
+void js_newrangeerror(js_State *J, const char *message);
+                                               ^
+jserror.c:96:1: note: Function 'js_newrangeerror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(rangeerror, RangeError)
+^
+jserror.c:97:1: style:inconclusive: Function 'js_newreferenceerror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(referenceerror, ReferenceError)
+^
+mujs.h:111:52: note: Function 'js_newreferenceerror' argument 2 names different: declaration 'message' definition 's'.
+void js_newreferenceerror(js_State *J, const char *message);
+                                                   ^
+jserror.c:97:1: note: Function 'js_newreferenceerror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(referenceerror, ReferenceError)
+^
+jserror.c:98:1: style:inconclusive: Function 'js_newsyntaxerror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(syntaxerror, SyntaxError)
+^
+mujs.h:112:49: note: Function 'js_newsyntaxerror' argument 2 names different: declaration 'message' definition 's'.
+void js_newsyntaxerror(js_State *J, const char *message);
+                                                ^
+jserror.c:98:1: note: Function 'js_newsyntaxerror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(syntaxerror, SyntaxError)
+^
+jserror.c:99:1: style:inconclusive: Function 'js_newtypeerror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(typeerror, TypeError)
+^
+mujs.h:113:47: note: Function 'js_newtypeerror' argument 2 names different: declaration 'message' definition 's'.
+void js_newtypeerror(js_State *J, const char *message);
+                                              ^
+jserror.c:99:1: note: Function 'js_newtypeerror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(typeerror, TypeError)
+^
+jserror.c:100:1: style:inconclusive: Function 'js_newurierror' argument 2 names different: declaration 'message' definition 's'. [funcArgNamesDifferent]
+DERROR(urierror, URIError)
+^
+mujs.h:114:46: note: Function 'js_newurierror' argument 2 names different: declaration 'message' definition 's'.
+void js_newurierror(js_State *J, const char *message);
+                                             ^
+jserror.c:100:1: note: Function 'js_newurierror' argument 2 names different: declaration 'message' definition 's'.
+DERROR(urierror, URIError)
+^
+jsfunction.c:5:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i, top = js_gettop(J);
+     ^
+jsfunction.c:50:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+jsfunction.c:97:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i, n;
+     ^
+jsgc.c:260:3: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 4) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 5) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 6) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 7) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 8) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 9) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 10) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jsgc.c:260:3: warning: %d in format string (no. 11) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(buf, sizeof buf, "garbage collected (%d%%): %d/%d envs, %d/%d funs, %d/%d objs, %d/%d props, %d/%d strs",
+  ^
+jslex.c:4:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN static void jsY_error(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+jsnumber.c:132:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+jsnumber.c:148:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+jsnumber.c:164:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+jsnumber.c:76:30: warning: Either the condition 'u>0' is redundant or there is division by zero at line 76. [zerodivcond]
+   buf[ndigits++] = digits[u % radix];
+                             ^
+jsnumber.c:75:12: note: Assuming that condition 'u>0' is not redundant
+  while (u > 0) {
+           ^
+jsnumber.c:77:9: note: Assignment to 'u/=radix'
+   u /= radix;
+        ^
+jsnumber.c:76:30: note: Division by zero
+   buf[ndigits++] = digits[u % radix];
+                             ^
+jsobject.c:327:13: style: The scope of the variable 'props' can be reduced. [variableScope]
+ js_Object *props;
+            ^
+json.c:48:14: style: The scope of the variable 'name' can be reduced. [variableScope]
+ const char *name;
+             ^
+json.c:113:14: style: The scope of the variable 'key' can be reduced. [variableScope]
+ const char *key;
+             ^
+json.c:114:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+json.c:189:9: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int i, n;
+        ^
+json.c:234:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i, n, found;
+     ^
+json.c:234:9: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int i, n, found;
+        ^
+json.c:234:12: style: The scope of the variable 'found' can be reduced. [variableScope]
+ int i, n, found;
+           ^
+jsparse.c:160:10: style: The scope of the variable 'a' can be reduced. [variableScope]
+ js_Ast *a;
+         ^
+jsparse.c:224:25: style: The scope of the variable 'arg' can be reduced. [variableScope]
+ js_Ast *name, *value, *arg, *body;
+                        ^
+jsparse.c:224:31: style: The scope of the variable 'body' can be reduced. [variableScope]
+ js_Ast *name, *value, *arg, *body;
+                              ^
+jsparse.c:380:10: style: The scope of the variable 'a' can be reduced. [variableScope]
+ js_Ast *a, *b;
+         ^
+jsparse.c:380:14: style: The scope of the variable 'b' can be reduced. [variableScope]
+ js_Ast *a, *b;
+             ^
+jsparse.c:684:14: style: The scope of the variable 'b' can be reduced. [variableScope]
+ js_Ast *a, *b;
+             ^
+jsparse.c:988:9: style: The scope of the variable 'x' can be reduced. [variableScope]
+ double x, y;
+        ^
+jsparse.c:988:12: style: The scope of the variable 'y' can be reduced. [variableScope]
+ double x, y;
+           ^
+jsparse.c:22:0: information: Skipping configuration '__printflike' since the value of '__printflike' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+JS_NORETURN static void jsP_error(js_State *J, const char *fmt, ...) JS_PRINTFLIKE(2,3);
+^
+jsproperty.c:322:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+jsproperty.c:323:14: style: The scope of the variable 's' can be reduced. [variableScope]
+ const char *s;
+             ^
+jsproperty.c:324:6: style: The scope of the variable 'k' can be reduced. [variableScope]
+ int k;
+     ^
+jsproperty.c:300:54: style:inconclusive: Function 'jsV_nextiterator' argument 2 names different: declaration 'iter' definition 'io'. [funcArgNamesDifferent]
+const char *jsV_nextiterator(js_State *J, js_Object *io)
+                                                     ^
+jsi.h:481:54: note: Function 'jsV_nextiterator' argument 2 names different: declaration 'iter' definition 'io'.
+const char *jsV_nextiterator(js_State *J, js_Object *iter);
+                                                     ^
+jsproperty.c:300:54: note: Function 'jsV_nextiterator' argument 2 names different: declaration 'iter' definition 'io'.
+const char *jsV_nextiterator(js_State *J, js_Object *io)
+                                                     ^
+jsregexp.c:56:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+jsrepr.c:8:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[40];
+      ^
+jsrepr.c:18:9: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int i, n;
+        ^
+jsrun.c:509:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[UTFmax + 1];
+      ^
+jsrun.c:520:16: style: The scope of the variable 'ref' can be reduced. [variableScope]
+  js_Property *ref;
+               ^
+jsrun.c:778:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+jsrun.c:900:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[32];
+      ^
+jsrun.c:482:46: style:inconclusive: Function 'js_isarrayindex' argument 2 names different: declaration 'str' definition 'p'. [funcArgNamesDifferent]
+int js_isarrayindex(js_State *J, const char *p, int *idx)
+                                             ^
+jsi.h:141:46: note: Function 'js_isarrayindex' argument 2 names different: declaration 'str' definition 'p'.
+int js_isarrayindex(js_State *J, const char *str, int *idx);
+                                             ^
+jsrun.c:482:46: note: Function 'js_isarrayindex' argument 2 names different: declaration 'str' definition 'p'.
+int js_isarrayindex(js_State *J, const char *p, int *idx)
+                                             ^
+jsrun.c:1045:60: style:inconclusive: Function 'jsR_newenvironment' argument 2 names different: declaration 'variables' definition 'vars'. [funcArgNamesDifferent]
+js_Environment *jsR_newenvironment(js_State *J, js_Object *vars, js_Environment *outer)
+                                                           ^
+jsi.h:444:60: note: Function 'jsR_newenvironment' argument 2 names different: declaration 'variables' definition 'vars'.
+js_Environment *jsR_newenvironment(js_State *J, js_Object *variables, js_Environment *outer);
+                                                           ^
+jsrun.c:1045:60: note: Function 'jsR_newenvironment' argument 2 names different: declaration 'variables' definition 'vars'.
+js_Environment *jsR_newenvironment(js_State *J, js_Object *vars, js_Environment *outer)
+                                                           ^
+jsrun.c:1600:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1608:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1662:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1668:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1674:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1679:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1734:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1755:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:1771:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsrun.c:2007:4: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   READSTRING();
+   ^
+jsstate.c:169:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+jsstate.c:163:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:169:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:174:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+jsstate.c:163:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:174:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:179:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+jsstate.c:163:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:179:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:188:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+jsstate.c:163:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:188:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:196:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+jsstate.c:163:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:196:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:211:2: error: Resource handle 'f' freed twice. [doubleFree]
+ fclose(f);
+ ^
+jsstate.c:163:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+jsstate.c:211:2: note: Resource handle 'f' freed twice.
+ fclose(f);
+ ^
+jsstate.c:162:12: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ if (fseek(f, 0, SEEK_END) < 0) {
+           ^
+jsstate.c:158:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+jsstate.c:162:12: note: Null pointer dereference
+ if (fseek(f, 0, SEEK_END) < 0) {
+           ^
+jsstate.c:167:12: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ n = ftell(f);
+           ^
+jsstate.c:158:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+jsstate.c:167:12: note: Null pointer dereference
+ n = ftell(f);
+           ^
+jsstate.c:173:12: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ if (fseek(f, 0, SEEK_SET) < 0) {
+           ^
+jsstate.c:158:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+jsstate.c:173:12: note: Null pointer dereference
+ if (fseek(f, 0, SEEK_SET) < 0) {
+           ^
+jsstring.c:90:7: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char buf[UTFmax + 1];
+      ^
+jsstring.c:338:18: style: The scope of the variable 'b' can be reduced. [variableScope]
+ const char *a, *b, *c, *e;
+                 ^
+jsstring.c:583:22: style: The scope of the variable 'b' can be reduced. [variableScope]
+ const char *p, *a, *b, *c, *e;
+                     ^
+jsvalue.c:7:40: style:inconclusive: Function 'js_strtol' argument 2 names different: declaration 'ep' definition 'p'. [funcArgNamesDifferent]
+double js_strtol(const char *s, char **p, int base)
+                                       ^
+jsi.h:131:40: note: Function 'js_strtol' argument 2 names different: declaration 'ep' definition 'p'.
+double js_strtol(const char *s, char **ep, int radix);
+                                       ^
+jsvalue.c:7:40: note: Function 'js_strtol' argument 2 names different: declaration 'ep' definition 'p'.
+double js_strtol(const char *s, char **p, int base)
+                                       ^
+jsvalue.c:7:47: style:inconclusive: Function 'js_strtol' argument 3 names different: declaration 'radix' definition 'base'. [funcArgNamesDifferent]
+double js_strtol(const char *s, char **p, int base)
+                                              ^
+jsi.h:131:48: note: Function 'js_strtol' argument 3 names different: declaration 'radix' definition 'base'.
+double js_strtol(const char *s, char **ep, int radix);
+                                               ^
+jsvalue.c:7:47: note: Function 'js_strtol' argument 3 names different: declaration 'radix' definition 'base'.
+double js_strtol(const char *s, char **p, int base)
+                                              ^
+jsvalue.c:167:27: style:inconclusive: Function 'js_itoa' argument 1 names different: declaration 'buf' definition 'out'. [funcArgNamesDifferent]
+const char *js_itoa(char *out, int v)
+                          ^
+jsi.h:461:27: note: Function 'js_itoa' argument 1 names different: declaration 'buf' definition 'out'.
+const char *js_itoa(char *buf, int a);
+                          ^
+jsvalue.c:167:27: note: Function 'js_itoa' argument 1 names different: declaration 'buf' definition 'out'.
+const char *js_itoa(char *out, int v)
+                          ^
+jsvalue.c:167:36: style:inconclusive: Function 'js_itoa' argument 2 names different: declaration 'a' definition 'v'. [funcArgNamesDifferent]
+const char *js_itoa(char *out, int v)
+                                   ^
+jsi.h:461:36: note: Function 'js_itoa' argument 2 names different: declaration 'a' definition 'v'.
+const char *js_itoa(char *buf, int a);
+                                   ^
+jsvalue.c:167:36: note: Function 'js_itoa' argument 2 names different: declaration 'a' definition 'v'.
+const char *js_itoa(char *out, int v)
+                                   ^
+jsvalue.c:226:52: style:inconclusive: Function 'jsV_stringtonumber' argument 2 names different: declaration 'string' definition 's'. [funcArgNamesDifferent]
+double jsV_stringtonumber(js_State *J, const char *s)
+                                                   ^
+jsi.h:469:52: note: Function 'jsV_stringtonumber' argument 2 names different: declaration 'string' definition 's'.
+double jsV_stringtonumber(js_State *J, const char *string);
+                                                   ^
+jsvalue.c:226:52: note: Function 'jsV_stringtonumber' argument 2 names different: declaration 'string' definition 's'.
+double jsV_stringtonumber(js_State *J, const char *s)
+                                                   ^
+jsvalue.c:270:66: style:inconclusive: Function 'jsV_numbertostring' argument 3 names different: declaration 'number' definition 'f'. [funcArgNamesDifferent]
+const char *jsV_numbertostring(js_State *J, char buf[32], double f)
+                                                                 ^
+jsi.h:468:66: note: Function 'jsV_numbertostring' argument 3 names different: declaration 'number' definition 'f'.
+const char *jsV_numbertostring(js_State *J, char buf[32], double number);
+                                                                 ^
+jsvalue.c:270:66: note: Function 'jsV_numbertostring' argument 3 names different: declaration 'number' definition 'f'.
+const char *jsV_numbertostring(js_State *J, char buf[32], double f)
+                                                                 ^
+jsvalue.c:456:47: style:inconclusive: Function 'js_newfunction' argument 2 names different: declaration 'function' definition 'fun'. [funcArgNamesDifferent]
+void js_newfunction(js_State *J, js_Function *fun, js_Environment *scope)
+                                              ^
+jsi.h:136:47: note: Function 'js_newfunction' argument 2 names different: declaration 'function' definition 'fun'.
+void js_newfunction(js_State *J, js_Function *function, js_Environment *scope);
+                                              ^
+jsvalue.c:456:47: note: Function 'js_newfunction' argument 2 names different: declaration 'function' definition 'fun'.
+void js_newfunction(js_State *J, js_Function *fun, js_Environment *scope)
+                                              ^
+jsvalue.c:474:45: style:inconclusive: Function 'js_newscript' argument 2 names different: declaration 'function' definition 'fun'. [funcArgNamesDifferent]
+void js_newscript(js_State *J, js_Function *fun, js_Environment *scope)
+                                            ^
+jsi.h:137:45: note: Function 'js_newscript' argument 2 names different: declaration 'function' definition 'fun'.
+void js_newscript(js_State *J, js_Function *function, js_Environment *scope);
+                                            ^
+jsvalue.c:474:45: note: Function 'js_newscript' argument 2 names different: declaration 'function' definition 'fun'.
+void js_newscript(js_State *J, js_Function *fun, js_Environment *scope)
+                                            ^
+main.c:175:18: warning: Either the condition 'n<0' is redundant or fread() argument nr 3 can have invalid value. The value is -1 but the valid values are '0:'. [invalidFunctionArg]
+ t = fread(s, 1, n, f);
+                 ^
+main.c:159:8: note: Assuming that condition 'n<0' is not redundant
+ if (n < 0) {
+       ^
+main.c:175:18: note: Invalid argument
+ t = fread(s, 1, n, f);
+                 ^
+main.c:160:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+main.c:154:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:160:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:165:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+main.c:154:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:165:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:171:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+main.c:154:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:171:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:178:3: error: Resource handle 'f' freed twice. [doubleFree]
+  fclose(f);
+  ^
+main.c:154:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:178:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:184:2: error: Memory pointed to by 's' is freed twice. [doubleFree]
+ free(s);
+ ^
+main.c:177:3: note: Memory pointed to by 's' is freed twice.
+  free(s);
+  ^
+main.c:184:2: note: Memory pointed to by 's' is freed twice.
+ free(s);
+ ^
+main.c:185:2: error: Resource handle 'f' freed twice. [doubleFree]
+ fclose(f);
+ ^
+main.c:154:3: note: Resource handle 'f' freed twice.
+  fclose(f);
+  ^
+main.c:185:2: note: Resource handle 'f' freed twice.
+ fclose(f);
+ ^
+main.c:153:12: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ if (fseek(f, 0, SEEK_END) < 0) {
+           ^
+main.c:149:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+main.c:153:12: note: Null pointer dereference
+ if (fseek(f, 0, SEEK_END) < 0) {
+           ^
+main.c:158:12: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ n = ftell(f);
+           ^
+main.c:149:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+main.c:158:12: note: Null pointer dereference
+ n = ftell(f);
+           ^
+main.c:164:12: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ if (fseek(f, 0, SEEK_SET) < 0) {
+           ^
+main.c:149:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+main.c:164:12: note: Null pointer dereference
+ if (fseek(f, 0, SEEK_SET) < 0) {
+           ^
+main.c:175:12: warning: Either the condition '!s' is redundant or there is possible null pointer dereference: s. [nullPointerRedundantCheck]
+ t = fread(s, 1, n, f);
+           ^
+main.c:170:6: note: Assuming that condition '!s' is not redundant
+ if (!s) {
+     ^
+main.c:175:12: note: Null pointer dereference
+ t = fread(s, 1, n, f);
+           ^
+main.c:175:21: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ t = fread(s, 1, n, f);
+                    ^
+main.c:149:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+main.c:175:21: note: Null pointer dereference
+ t = fread(s, 1, n, f);
+                    ^
+main.c:181:2: warning:inconclusive: Either the condition '!s' is redundant or there is possible null pointer dereference: s. [nullPointerRedundantCheck]
+ s[n] = 0;
+ ^
+main.c:170:6: note: Assuming that condition '!s' is not redundant
+ if (!s) {
+     ^
+main.c:181:2: note: Null pointer dereference
+ s[n] = 0;
+ ^
+main.c:185:9: warning: Either the condition '!f' is redundant or there is possible null pointer dereference: f. [nullPointerRedundantCheck]
+ fclose(f);
+        ^
+main.c:149:6: note: Assuming that condition '!f' is not redundant
+ if (!f) {
+     ^
+main.c:185:9: note: Null pointer dereference
+ fclose(f);
+        ^
+main.c:283:2: warning:inconclusive: Possible null pointer dereference: s [nullPointer]
+ s[n] = 0;
+ ^
+main.c:261:12: note: Assignment 's=NULL', assigned value is 0
+ char *s = NULL;
+           ^
+main.c:277:12: note: Assuming condition is false
+ if (ferror(stdin)) {
+           ^
+main.c:283:2: note: Null pointer dereference
+ s[n] = 0;
+ ^
+main.c:75:6: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int n;
+     ^
+main.c:298:8: style: The scope of the variable 'input' can be reduced. [variableScope]
+ char *input;
+       ^
+main.c:303:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i, c;
+     ^
+regexp.c:577:24: style: The scope of the variable 'tail' can be reduced. [variableScope]
+ Renode *cat, *head, **tail;
+                       ^
+regexp.c:1001:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+utf.c:200:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c;
+     ^
+utf.c:221:6: style: The scope of the variable 'm' can be reduced. [variableScope]
+ int m;
+     ^
+regexp.c:1174:39: style:inconclusive: Function 'js_regexec' argument 2 names different: declaration 'string' definition 'sp'. [funcArgNamesDifferent]
+int regexec(Reprog *prog, const char *sp, Resub *sub, int eflags)
+                                      ^
+regexp.h:19:39: note: Function 'js_regexec' argument 2 names different: declaration 'string' definition 'sp'.
+int regexec(Reprog *prog, const char *string, Resub *sub, int eflags);
+                                      ^
+regexp.c:1174:39: note: Function 'js_regexec' argument 2 names different: declaration 'string' definition 'sp'.
+int regexec(Reprog *prog, const char *sp, Resub *sub, int eflags)
+                                      ^
+regexp.c:661:17: style: Local variable 'split' shadows outer function [shadowFunction]
+ Reinst *inst, *split, *jump;
+                ^
+jsproperty.c:71:21: note: Shadowed declaration
+static js_Property *split(js_Property *node)
+                    ^
+regexp.c:661:17: note: Shadow variable
+ Reinst *inst, *split, *jump;
+                ^
+regexp.c:862:10: style: Local variable 'split' shadows outer function [shadowFunction]
+ Reinst *split, *jump;
+         ^
+jsproperty.c:71:21: note: Shadowed declaration
+static js_Property *split(js_Property *node)
+                    ^
+regexp.c:862:10: note: Shadow variable
+ Reinst *split, *jump;
+         ^
+regexp.c:869:25: error: Uninitialized struct member: g.error [uninitStructMember]
+  if (errorp) *errorp = g.error;
+                        ^
+regexp.c:1193:14: style: The scope of the variable 's' can be reduced. [variableScope]
+ const char *s;
+             ^
+regexp.c:1194:10: style: The scope of the variable 'p' can be reduced. [variableScope]
+ Reprog *p;
+         ^
+regexp.c:1196:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+pp.c:922:18: warning: Either the condition 'n<0' is redundant or fread() argument nr 3 can have invalid value. The value is -1 but the valid values are '0:'. [invalidFunctionArg]
+ t = fread(s, 1, (size_t)n, f);
+                 ^
+pp.c:909:8: note: Assuming that condition 'n<0' is not redundant
+ if (n < 0) {
+       ^
+pp.c:922:18: note: Invalid argument
+ t = fread(s, 1, (size_t)n, f);
+                 ^
+pp.c:397:30: style:inconclusive: Function 'pexpi' argument 2 names different: declaration 'i' definition 'p'. [funcArgNamesDifferent]
+static void pexpi(int d, int p, js_Ast *exp)
+                             ^
+pp.c:305:30: note: Function 'pexpi' argument 2 names different: declaration 'i' definition 'p'.
+static void pexpi(int d, int i, js_Ast *exp);
+                             ^
+pp.c:397:30: note: Function 'pexpi' argument 2 names different: declaration 'i' definition 'p'.
+static void pexpi(int d, int p, js_Ast *exp)
+                             ^
+pp.c:147:9: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   p += sizeof(s) / sizeof(*p);
+        ^
+pp.c:154:9: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   p += sizeof(s) / sizeof(*p);
+        ^
+pp.c:167:9: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+   p += sizeof(s) / sizeof(*p);
+        ^
+jscompile.c:791:15: warning: Null pointer dereference: target [ctunullpointer]
+ jump->next = target->jumps;
+              ^
+jscompile.c:1216:8: note: Assuming that condition '!target' is not redundant
+
+       ^
+jscompile.c:1225:10: note: Calling function addjump, 4th argument is null
+  addjump(J, F, STM_BREAK, target, emitjump(J, F, OP_JUMP));
+         ^
+jscompile.c:791:15: note: Dereferencing argument target that is null
+ jump->next = target->jumps;
+              ^
+jsintern.c:108:0: style: The function 'jsS_dumpstrings' is never used. [unusedFunction]
+
+^
+utf.c:266:0: style: The function 'jsU_islowerrune' is never used. [unusedFunction]
+
+^
+utf.c:280:0: style: The function 'jsU_isupperrune' is never used. [unusedFunction]
+
+^
+jsstate.c:255:0: style: The function 'js_atpanic' is never used. [unusedFunction]
+
+^
+jsrun.c:184:0: style: The function 'js_currentfunctiondata' is never used. [unusedFunction]
+
+^
+jsrun.c:972:0: style: The function 'js_delglobal' is never used. [unusedFunction]
+
+^
+jsstate.c:278:0: style: The function 'js_getcontext' is never used. [unusedFunction]
+
+^
+jsrun.c:939:0: style: The function 'js_getregistry' is never used. [unusedFunction]
+
+^
+jsrun.c:395:0: style: The function 'js_insert' is never used. [unusedFunction]
+
+^
+json.c:14:0: style: The function 'js_isbooleanobject' is never used. [unusedFunction]
+
+^
+json.c:19:0: style: The function 'js_isdateobject' is never used. [unusedFunction]
+
+^
+jsrun.c:247:0: style: The function 'js_iserror' is never used. [unusedFunction]
+
+^
+jsrun.c:239:0: style: The function 'js_isuserdata' is never used. [unusedFunction]
+
+^
+jserror.c:94:0: style: The function 'js_newerror' is never used. [unusedFunction]
+
+^
+jserror.c:95:0: style: The function 'js_newevalerror' is never used. [unusedFunction]
+
+^
+jsvalue.c:415:0: style: The function 'js_newobjectx' is never used. [unusedFunction]
+
+^
+jserror.c:96:0: style: The function 'js_newrangeerror' is never used. [unusedFunction]
+
+^
+jserror.c:97:0: style: The function 'js_newreferenceerror' is never used. [unusedFunction]
+
+^
+jserror.c:99:0: style: The function 'js_newtypeerror' is never used. [unusedFunction]
+
+^
+jserror.c:100:0: style: The function 'js_newurierror' is never used. [unusedFunction]
+
+^
+jsvalue.c:547:0: style: The function 'js_newuserdata' is never used. [unusedFunction]
+
+^
+jsrun.c:1372:0: style: The function 'js_pconstruct' is never used. [unusedFunction]
+
+^
+jsstate.c:48:0: style: The function 'js_ploadfile' is never used. [unusedFunction]
+
+^
+jsrun.c:910:0: style: The function 'js_ref' is never used. [unusedFunction]
+
+^
+regexp.c:959:0: style: The function 'js_regfree' is never used. [unusedFunction]
+
+^
+jsstate.c:273:0: style: The function 'js_setcontext' is never used. [unusedFunction]
+
+^
+jsstate.c:268:0: style: The function 'js_setreport' is never used. [unusedFunction]
+
+^
+jsrun.c:316:0: style: The function 'js_toint16' is never used. [unusedFunction]
+
+^
+jsrun.c:321:0: style: The function 'js_touint16' is never used. [unusedFunction]
+
+^
+jsrun.c:349:0: style: The function 'js_touserdata' is never used. [unusedFunction]
+
+^
+jsstate.c:107:0: style: The function 'js_tryboolean' is never used. [unusedFunction]
+
+^
+jsstate.c:91:0: style: The function 'js_tryinteger' is never used. [unusedFunction]
+
+^
+jsstate.c:75:0: style: The function 'js_trynumber' is never used. [unusedFunction]
+
+^
+jsrun.c:272:0: style: The function 'js_type' is never used. [unusedFunction]
+
+^
+jsrun.c:934:0: style: The function 'js_unref' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
